@@ -8,26 +8,64 @@
     <style>
         body{
             background-color: #2D2926 ;
+            font-family: "Roboto", sans-serif;
+            color: rgb(63, 26, 26);
+
+            
         }
 
         .main{
-            height: 50vh;
+            height: max-content;
             width: 90%;
+            display: flex;
+            flex-direction: column;
             border-radius: 5px;
             margin: 0 auto;
+
             background-repeat: no-repeat;
-            background-size: cover;
-            background-color: #feecc0 ; 
-            display: flex;
+            background-size:auto;
+            background-image: url(../felhasznalhato/Fooldalhatter.png);
+        }
+        
+        .idezet{
+            font-style: italic;
+            margin-top: 5vh;
+            margin-left: 10vh;
+            margin-bottom: 5vh;
+            color: black;
+
+
         }
 
-        .fohatter{
-            min-width: 100%;
-            height:100%;
-            width: 100%;
-            border-radius: 5px;
+        .bal{
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            align-items: center;
+        }
+
+        h1{
+            margin-right: 10vh;
+        }
+
+        .linkek{
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid rgb(63, 26, 26);
+            border-radius: 10px;
+
+        }
+
+        .folink{
             margin: 0 auto;
-            opacity: 20%;
+            margin-top: 2vh;
+            margin-bottom: 2vh;
+            text-decoration: none;
+            color: rgb(63, 26, 26);
+            font-weight: 600;
+
         }
 
 
@@ -37,9 +75,17 @@
     <!--Itt lesz a header-->
 
     <div class="main">
-        <div class="backimage">
-            <img src="../felhasznalhato/Fooldalhatter.png" alt="" class="fohatter">
-        </div>
+            <p class="idezet">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod, ipsa magnam! Ipsum, alias. Sapiente</p>
+            <div class="bal">
+                <h1>Mit szeretnél tudni rólunk?</h1>
+                <div class="linkek">
+                    <a href="./etlap.html" class="folink">Étlap</a>
+                    <a href="./szolgaltatasok.html" class="folink">Szolgáltatásaink</a>
+                    <a href="" class="folink">Történetünk</a>
+                    <a href="" class="folink">Hogyan foglalhatok?</a>
+                </div>
+            </div>
+            <div class=" jobb"></div>
     </div>
     
 </body>
