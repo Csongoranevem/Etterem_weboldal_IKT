@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTÉ - Szolgáltatások</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Roboto", sans-serif;
+            background-color: #2D2926;
+        }
+    /*header formázása*/
+        header {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #2D2926;
+            color: #fff;
+            padding: 10px;
+        }
+    
+        header img {
+            height: 50px;
+            max-height: 50px;
+            margin-right: 10px;
+        }
+    /*navigációs rész formázása*/
+        nav {
+            display: flex;
+        }
+    
+        nav  a {
+            font-size: large;
+            padding: 5px;
+            color: #dfdfdf;
+            text-decoration: none;
+            margin: 0 15px;
+            align-self: baseline;
+    
+        }
+    
+        .navlink:hover{
+            animation-name: NavHover;
+            animation-duration: 0.6s;
+            animation-fill-mode: forwards;
+            text-decoration: underline;
+            text-underline-offset:10px;
+            border-radius: 5px;
+            
+        }
+        @keyframes NavHover {
+            0%{text-underline-offset:10px; }
+            100%{text-underline-offset:5px; background-color: #dfdfdf; color: #2D2926;}
+        }
+    
+        .logokep{
+            margin-left: 50px;
+        }
+    
+    
+    
+    
+      </style>
+    </head>
+    <body>
+      <header>
+        <img src="../felhasznalhato/Logoszoveg.PNG" alt="Patat Lajos Étterem">
+        <nav>
+            <a href="../code/index.html" class="navlink">Főoldal</a>
+            <a href="../code/etlap.html" class="navlink">Étlap</a>
+            <a href="../code/szolgaltatasok.html" class="navlink">Szolgáltatások</a>
+            <a href="../code/rolunk.html" class="navlink">Rólunk</a>
+            <a href="../code/foglalas.html" class="navlink">Foglalás</a>
+            <a href="">
+                <img src="../felhasznalhato/Logokep.PNG" alt="Logokép" class="logokep">
+            </a>
+    
+        </nav>
+      </header>
+    
+    </body>
+</html>
