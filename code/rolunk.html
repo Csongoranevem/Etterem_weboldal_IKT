@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PTÉ-Rólunk</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Roboto", sans-serif;
+            background-color: #2D2926;
+            
+        }
+        
+        header {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #2D2926;
+            color: #fff;
+            padding: 10px;
+        }
+    
+        header img {
+            height: 50px;
+            max-height: 50px;
+            margin-right: 10px;
+        }
+    /*navigációs rész formázása*/
+        nav {
+            display: flex;
+        }
+    
+        nav  a {
+            font-size: large;
+            padding: 5px;
+            color: #dfdfdf;
+            text-decoration: none;
+            margin: 0 15px;
+            align-self: baseline;
+    
+        }
+    
+        .navlink:hover{
+            animation-name: NavHover;
+            animation-duration: 0.6s;
+            animation-fill-mode: forwards;
+            text-decoration: underline;
+            text-underline-offset:10px;
+            border-radius: 5px;
+            
+        }
+        @keyframes NavHover {
+            0%{text-underline-offset:10px; }
+            100%{text-underline-offset:5px; background-color: #dfdfdf; color: #2D2926;}
+        }
+    
+        .logokep{
+            margin-left: 50px;
+        }
+        /*Kontent rész formázása*/
+        .content{
+            background: url(../felhasznalhato/regietterem.jpg);
+            background-repeat: no-repeat;
+            background-size: cover ;
+            margin: 1%;
+            display: flex;
+            justify-content: center;
+            
+        
+        }
+        .szovegek{background-color:#FFF4d8;
+            display: flex;
+            flex-direction: column;
+            width: 60%;
+            margin-top: 50px;
+            border-radius: 10px;
+            margin-bottom: 50px;
+            padding: 10px;
+
+            
+        }
+        h1 {margin: 10px;}
+        #utolso{margin-top: 10%;}
+        
+        
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="../felhasznalhato/Logoszoveg.PNG" alt="Patat Lajos Étterem">
+        <nav>
+            <a href="../code/index.html" class="navlink">Főoldal</a>
+            <a href="../code/etlap.html" class="navlink">Étlap</a>
+            <a href="../code/szolgaltatasok.html" class="navlink">Szolgáltatások</a>
+            <a href="../code/rolunk.html" class="navlink">Rólunk</a>
+            <a href="../code/foglalas.html" class="navlink">Foglalás</a>
+            <a href="">
+                <img src="../felhasznalhato/Logokep.PNG" alt="Logokép" class="logokep">
+            </a>
+    
+        </nav>
+      </header>
+      <div class="content">
+        <div class="szovegek">
+           <center> <h1>Múlt</h1>
+            <p>Patat Lajos étterme mély történelmi gyökerekkel rendelkezik, hiszen eredeti változata 20. századi Magyarország egyik kiváló szakácsáról, Patat Lajosról kapta nevét. Az eredeti étterem 1956-ban tragikus módon megsemmisült a szabadságharc folyamán. Azonban idén újjáéledt eredeti helyén, büszkén hordozva a hagyományokat és az emlékét.</p>
+            <h1>Jelen</h1>
+            <p>Az új Patat Lajos étterem azonban nem csupán a múltban gyökerezik, hanem a jelenben is kiemelkedő szerepet tölt be. Az étterem kibővítette szolgáltatási körét, és ma már nemcsak a finom ételeiről híres, hanem golfklubként és bowling pályaként is szolgál. Az étterem a szórakozás és a kulináris élmények szerelmeseinek ideális helyszíne lett, illetve különböző eseményeknek is otthont ad. Esküvők, rendezvények és ünnepségek szervezése is a szolgáltatásai között szerepel, így lehetőséget kínálva az ügyfeleknek, hogy az éttermet az életük különleges pillanatainak helyszínévé tegyék.</p>
+            <h1>Jövő</h1>
+            <p>A jövőt illetően a Patat Lajos étterem elkötelezett a folyamatos fejlődés és kreativitás mellett. Az étterem tervezi további szolgáltatások bevezetését, és a gasztronómiai világban való további megerősödést. A cél az, hogy továbbra is fenntartsák a Patat Lajos nevéhez fűződő hagyományokat, miközben nyitottak az újításokra és az ügyfelek igényeire. A Patat Lajos étterem így nem csupán egy étkezési hely, hanem egy teljes élményközpont, amely ötvözi a múltat, a jelent és a jövőt.</p>
+            <p id="utolso">Szorgalmas és kitartó személyzetünk azon dolgozik hogy a múlt pozitív dolgait ötvözze a jövő új lehetőségeivel
+                Köszönjük nekik!</p>
+        </center>
+        </div>
+
+
+
+      </div>
+</body>
+</html>
