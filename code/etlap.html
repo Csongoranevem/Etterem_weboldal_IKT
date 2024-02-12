@@ -80,7 +80,7 @@
         }
 
         .etel{
-            display: flex;
+            display: block;
             flex-direction: row;
             width: 90%;
             margin-left: 2%;
@@ -96,9 +96,9 @@
             margin-left: 10px;
         }
 
-        .reszletfelirat{
+        .ar{
             opacity: 75%;
-            align-self: flex-end;
+            float: right;
             margin-left: auto;
             margin-right: 2%;
             font-size: 20px;
@@ -148,9 +148,9 @@
       <div class="main">
         <h1>Olasz Ételeink</h1>
         <ul>
-            <li class="etel">
-                <div class="etelnev">Pizza Margherita  - 2500 Ft</div>
-                <div class="reszletfelirat" onclick="Reszlet(this)">További információ ▼</div>
+            <li class="etel" onclick="Reszlet(this)">
+                <div class="etelnev">Pizza Margherita</div>
+                <div class="ar">2500 Ft</div>
 
                 <div class="reszlet">
                     (paradicsomszósz, mozzarella sajt, bazsalikom)
@@ -159,5 +159,12 @@
         </ul>
       </div>
     </body>
+    <script>
+                function Reszlet(item) {
+            let details = item.querySelector('.reszlet');
+            details.style.display = (details.style.display === 'block') ? 'none' : 'block';
+
+        }
+    </script>
 
 </html>
