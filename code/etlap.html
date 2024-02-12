@@ -74,6 +74,9 @@
 
         ul{
             list-style: none;
+            display: flex;
+            flex-direction: column;
+            row-gap: 10px;
         }
 
         .etel{
@@ -82,21 +85,26 @@
             width: 90%;
             margin-left: 2%;
             font-size: 30px;
+            margin-bottom: 10px;
             background-color: #FEECC0;
-            margin-top: 20px;
-            margin-bottom: 20px;
             box-shadow: 0px 3px 5px #2D2926 ;
 
 
         }
 
+        .etelnev{
+            margin-left: 10px;
+        }
+
         .reszletfelirat{
+            opacity: 75%;
             align-self: flex-end;
             margin-left: auto;
             margin-right: 2%;
             font-size: 20px;
             margin-top: 5px;
             align-self: center;
+
         }
 
         .reszlet{
@@ -141,8 +149,8 @@
         <h1>Olasz Ételeink</h1>
         <ul>
             <li class="etel">
-                <div>Pizza Margherita  - 2500 Ft</div>
-                <div class="reszletfelirat">Több</div>
+                <div class="etelnev">Pizza Margherita  - 2500 Ft</div>
+                <div class="reszletfelirat" onclick="Reszlet(this)">További információ ▼</div>
 
                 <div class="reszlet">
                     (paradicsomszósz, mozzarella sajt, bazsalikom)
@@ -150,6 +158,6 @@
             </li>
         </ul>
       </div>
-    
     </body>
+
 </html>
