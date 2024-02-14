@@ -95,8 +95,18 @@
 
 
         .etel:hover{
-            background-color: #c5b16e;
+            animation-name: etelHover;
+            animation-duration: 0.5s;
+            animation-timing-function: ease-out;
+            animation-fill-mode: forwards;
+
         }
+
+        @keyframes etelHover {
+            0%{background-color: #FEECC0;}
+            100%{background-color: #c5b16e;}
+        }
+
 
         .etelnev{
             margin-left: 10px;
