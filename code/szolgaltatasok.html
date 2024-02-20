@@ -58,7 +58,7 @@
         }
 
         .hamburger{
-
+            display: none;
         }
     
         .logokep{
@@ -165,17 +165,16 @@
             <a href="">
                 <img src="../felhasznalhato/Logokep.PNG" alt="Logokép" class="logokep">
             </a>
+            
             <div class="hamburger">
+                <img src="../felhasznalhato/Logokep.PNG" alt="" onclick="HamHam(this)">
                 <nav>
                     <a href="../code/index.html" class="navlink">Főoldal</a>
                     <a href="../code/etlap.html" class="navlink">Étlap</a>
                     <a href="../code/szolgaltatasok.html" class="navlink">Szolgáltatások</a>
                     <a href="../code/rolunk.html" class="navlink">Rólunk</a>
                     <a href="../code/foglalas.html" class="navlink">Foglalás</a>
-                    <a href="">
-                        <img src="../felhasznalhato/Logokep.PNG" alt="Logokép" class="logokep">
-                    </a>
-            </div>
+                </div>
 
     
         </nav>
@@ -252,4 +251,13 @@
         
 
     </body>
+    <script>
+        function HamHam(item) {
+    let hamham = item.querySelector('.hamburger');
+    hamham.style.display = (hamham.style.display === 'block') ? 'none' : 'block';
+}
+
+
+
+</script>
 </html>
