@@ -132,7 +132,7 @@
         h1{
             
             letter-spacing: 6px;
-            width: 33%;
+            width: max-content;
             margin-left: 2%;
             font-size: 40px;
             padding: 5px;
@@ -152,6 +152,10 @@
             transform: rotate(0deg);
         }
 
+        @media only screen and (max-width:1200px){
+            h1{text-align: center;
+            width: min-content;}
+        }
 
     
     
