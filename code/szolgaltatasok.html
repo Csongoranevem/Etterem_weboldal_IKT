@@ -108,6 +108,7 @@
         .leiras{
             display: flex;
             flex-direction: row;
+            flex-basis: auto;
             width: 90%;
             margin-left: 5%;
             font-size: 30px;           
@@ -142,7 +143,7 @@
         .szolgKep{
             width: 350px;
             height: fit-content;
-
+            
             max-height: fit-content;
             
         }
@@ -150,10 +151,28 @@
         .ar{
             display: block;
             margin-right: 0.5vh;
+            margin-top: 0.5vh;
+            margin-bottom: 0.5vh;
         }
         @media only screen and (max-width:1200px){
             h1{text-align: center;
             width: min-content;}
+        }
+
+        @media screen and (max-width:850px){
+            .szolgaltatas{
+                .leiras{
+                    flex-wrap: wrap;
+            
+                }
+            }
+        }
+
+        @media screen and (max-width:450px){
+
+            .szolgKep{
+                display: none;
+            }
         }
     
       </style>
@@ -199,6 +218,7 @@
                         <p>Ár: <b>3000 Ft/óra</b></p>
                         <p><small><i> Az árat privát rendezvény esetén egyeztetések útján határozzuk meg</i></small></p>    
                     </div>
+                    <div class="break"></div>
                     <img src="../felhasznalhato/golf.jpg" alt="" class="szolgKep">
                 </div>
     
