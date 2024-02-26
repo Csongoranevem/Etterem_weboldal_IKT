@@ -152,10 +152,33 @@
             transform: rotate(0deg);
         }
 
+        .hambi{
+            display: none;
+            background-color: #2D2926;
+            box-shadow: 2px 2px 5px #2D2926;
+            margin-top: 20vh;
+
+
+        }
+
         @media only screen and (max-width:1200px){
             h1{text-align: center;
             width: min-content;}
         }
+
+        @media only screen and (max-width:1000px){
+            .normal{
+                display: none;
+                flex-direction: column;
+            }
+
+            .hambi{
+                display: flex;
+                flex-direction: column;
+            }
+        }
+
+
 
     
     
@@ -164,7 +187,7 @@
     <body>
       <header>
         <img src="./felhasznalhato/Logoszoveg.PNG" alt="Patat Lajos Étterem">
-        <nav>
+        <nav class="normal">
             <a href="./index.html" class="navlink">Főoldal</a>
             <a href="./etlap.html" class="navlink">Étlap</a>
             <a href="./szolgaltatasok.html" class="navlink">Szolgáltatások</a>
@@ -173,6 +196,20 @@
             <a href="">
                 <img src="./felhasznalhato/Logokep.PNG" alt="Logokép" class="logokep">
             </a>
+    
+        </nav>
+
+
+        <nav class="hambi">
+            <a href="">
+                <img src="./felhasznalhato/Logokep.PNG" alt="Logokép" class="logokep">
+            </a>
+            <a href="./index.html" class="navlink">Főoldal</a>
+            <a href="./etlap.html" class="navlink">Étlap</a>
+            <a href="./szolgaltatasok.html" class="navlink">Szolgáltatások</a>
+            <a href="./rolunk.html" class="navlink">Rólunk</a>
+            <a href="./foglalas.html" class="navlink">Foglalás</a>
+
     
         </nav>
       </header>
