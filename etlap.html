@@ -149,12 +149,16 @@
         }
 
         #hambi{
+            
+            width: 97%;
             display: none;
             text-decoration: none;
             color: #dfdfdf;
         }
 
         #hambi a{
+            text-align: center;
+            
             margin-left: auto;
             display: block;
             text-decoration: none;
@@ -169,23 +173,23 @@
         }
 
         .hambikep{
-            padding-top: 1vh;
+            padding: 1vh;
+            margin-top: 2vh;
             max-width: 35px;
-            height: 40px;
+            height: 35px;
 
         }
 
         .hambikep:hover{
             animation-name: hambikepAnimacio;
-            border: 2px solid #dfdfdf;
-            animation-duration: 2s ;
+            animation-duration: 0.5s ;
             animation-fill-mode: forwards;            
 
         }
 
         @keyframes hambikepAnimacio {
-            0%{}
-            100%{}
+            0%{box-shadow: none;}
+            100%{box-shadow: 0px 0px 5px inset rgb(212, 212, 212);}
         }
 
 
@@ -238,7 +242,7 @@
     </div>
 </header> 
 
-        
+    <center>
         <div id="hambi">
             <a href="./index.html" class="navlink">Főoldal</a>
             <a href="./etlap.html" class="navlink">Étlap</a>
@@ -247,6 +251,7 @@
             <a href="./foglalas.html" class="navlink">Foglalás</a>
 
         </div>
+    </center>
 
       <div class="main">
 
