@@ -148,17 +148,50 @@
 
         }
 
-        .nyil{
-            transform: rotate(0deg);
+        #hambi{
+            display: none;
+            text-decoration: none;
+            color: #dfdfdf;
         }
 
-        .hambi{
+        #hambi a{
+            margin-left: auto;
+            display: block;
+            text-decoration: none;
+            color: #dfdfdf;
+            font-size: larger;
+        }
+
+        .Hmenu{
             display: none;
-            background-color: #2D2926;
-            box-shadow: 2px 2px 5px #2D2926;
-            margin-top: 20vh;
+            position: relative;
+
+        }
+
+        .hambikep{
+            padding-top: 1vh;
+            max-width: 35px;
+            height: 40px;
+
+        }
+
+        .hambikep:hover{
+            animation-name: hambikepAnimacio;
+            border: 2px solid #dfdfdf;
+            animation-duration: 2s ;
+            animation-fill-mode: forwards;            
+
+        }
+
+        @keyframes hambikepAnimacio {
+            0%{}
+            100%{}
+        }
 
 
+
+        .nyil{
+            transform: rotate(0deg);
         }
 
         @media only screen and (max-width:1200px){
@@ -170,13 +203,14 @@
             .normal{
                 display: none;
                 flex-direction: column;
-            }
 
-            .hambi{
-                display: flex;
-                flex-direction: column;
+                
             }
+            .Hmenu{
+                display: flex;
+                position: relative;
         }
+            }
 
 
 
@@ -198,23 +232,24 @@
             </a>
     
         </nav>
+    
+        <div class="Hmenu">
+            <img src="./felhasznalhato/hambikep.png" alt="Logokép" class="hambikep" onclick="Hambi()">
+    </div>
+</header> 
 
-
-        <nav class="hambi">
-            <a href="">
-                <img src="./felhasznalhato/Logokep.PNG" alt="Logokép" class="logokep">
-            </a>
+        
+        <div id="hambi">
             <a href="./index.html" class="navlink">Főoldal</a>
             <a href="./etlap.html" class="navlink">Étlap</a>
             <a href="./szolgaltatasok.html" class="navlink">Szolgáltatások</a>
             <a href="./rolunk.html" class="navlink">Rólunk</a>
             <a href="./foglalas.html" class="navlink">Foglalás</a>
 
-    
-        </nav>
-      </header>
+        </div>
 
       <div class="main">
+
         
         <ul>
             <h1>Olasz Ételeink</h1>
@@ -548,6 +583,11 @@
             details.style.display = (details.style.display === 'block') ? 'none' : 'block';
             let nyilforgat=item.querySelector('.nyil');
             nyilforgat.style.transform = (nyilforgat.style.transform === 'rotate(90deg)') ? 'rotate(0deg)' : 'rotate(90deg)';
+        }
+
+        function Hambi() {
+            let item = document.getElementById('hambi');
+            item.style.display = (item.style.display === 'block') ? 'none' : 'block';
         }
 
 
