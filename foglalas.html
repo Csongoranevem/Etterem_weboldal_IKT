@@ -82,6 +82,75 @@
         
         }
 
+
+        #hambi{
+            
+            width: 97%;
+            display: none;
+            text-decoration: none;
+            color: #dfdfdf;
+        }
+
+        #hambi a{
+            text-align: center;
+            
+            margin-left: auto;
+            display: block;
+            text-decoration: none;
+            color: #dfdfdf;
+            font-size: larger;
+        }
+
+        .Hmenu{
+            display: none;
+            position: relative;
+
+        }
+
+        @keyframes hambikepAnimacio {
+            0%{filter: brightness(100%);}
+            100%{filter: brightness(150%);}
+        }
+
+
+
+        .hambikep{
+            padding: 1vh;
+            margin-top: 2vh;
+            max-width: 35px;
+            height: 35px;
+
+        }
+
+        .hambikep:hover{
+            animation-name: hambikepAnimacio;
+            animation-duration: 0.5s ;
+            animation-fill-mode: forwards;            
+
+        }
+
+
+
+
+        @media only screen and (max-width:1200px){
+            h1{text-align: center;
+            width: min-content;}
+        }
+
+        @media only screen and (max-width:1000px){
+            .normal{
+                display: none;
+                flex-direction: column;
+
+                
+            }
+            .Hmenu{
+                display: flex;
+                position: relative;
+        }
+            }
+
+
         @media only screen and (max-width:240px)
         {
         
@@ -94,20 +163,35 @@
       </style>
     </head>
     <body>
-      <header>
-        <img src="./felhasznalhato/Logoszoveg.PNG" alt="Patat Lajos Étterem">
-        <nav>
-            <a href="./index.html" class="navlink">Főoldal</a>
-            <a href="./etlap.html" class="navlink">Étlap</a>
-            <a href="./szolgaltatasok.html" class="navlink">Szolgáltatások</a>
-            <a href="./rolunk.html" class="navlink">Rólunk</a>
-            <a href="./foglalas.html" class="navlink">Foglalás</a>
-            <a href="">
-                <img src="./felhasznalhato/Logokep.PNG" alt="Logokép" class="logokep">
-            </a>
+        <header>
+            <img src="./felhasznalhato/Logoszoveg.PNG" alt="Patat Lajos Étterem">
+            <nav class="normal">
+                <a href="./index.html" class="navlink">Főoldal</a>
+                <a href="./etlap.html" class="navlink">Étlap</a>
+                <a href="./szolgaltatasok.html" class="navlink">Szolgáltatások</a>
+                <a href="./rolunk.html" class="navlink">Rólunk</a>
+                <a href="./foglalas.html" class="navlink">Foglalás</a>
+                <a href="">
+                    <img src="./felhasznalhato/Logokep.PNG" alt="Logokép" class="logokep">
+                </a>
+        
+            </nav>
+        
+            <div class="Hmenu">
+                <img src="./felhasznalhato/hambikep.png" alt="Logokép" class="hambikep" onclick="Hambi()">
+        </div>
+    </header> 
     
-        </nav>
-      </header>
+        <center>
+            <div id="hambi">
+                <a href="./index.html" class="navlink">Főoldal</a>
+                <a href="./etlap.html" class="navlink">Étlap</a>
+                <a href="./szolgaltatasok.html" class="navlink">Szolgáltatások</a>
+                <a href="./rolunk.html" class="navlink">Rólunk</a>
+                <a href="./foglalas.html" class="navlink">Foglalás</a>
+    
+            </div>
+        </center>
     <center>
       <div class="content">
         <div class="hatterszin">
@@ -121,5 +205,12 @@
         </div>
     </div>
 </center>
+
+<script>
+            function Hambi() {
+            let item = document.getElementById('hambi');
+            item.style.display = (item.style.display === 'block') ? 'none' : 'block';
+        }
+</script>
     </body>
 </html>
