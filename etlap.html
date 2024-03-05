@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PTÉ - Étlap</title>
     <style>
+
+        html{
+            scroll-behavior: smooth;
+        }
+
+
         body {
             margin: 0;
             padding: 0;
@@ -198,7 +204,24 @@
 
         }
 
+        button{
+                position: fixed;
+                left: 91%;
+                top: 90%;
+                right: 5vh;
+                width: fit-content;
+                height: 5vh;
+                background-color: #2D2926;
+                color: #dfdfdf;
+                font-weight: bolder;
+                box-shadow: 5px 0px 5px #2D2926;
+                border-radius: 5px;
+                margin-bottom: 10vh;
+            }
 
+            .ArrowUp{
+                width: 5vh;
+            }
 
 
         @media only screen and (max-width:1200px){
@@ -216,16 +239,28 @@
             .Hmenu{
                 display: flex;
                 position: relative;
-        }
+            }
+
+            button{
+
+                left: 85%;
+            }
+
+            }
+
+            
+            @media only screen and (min-width:650px){
+
+            button{
+                left: 90%;
+                }
             }
 
 
-
-    
-    
       </style>
     </head>
     <body>
+        <div id="top"></div>
       <header>
         <img src="./felhasznalhato/Logoszoveg.PNG" alt="Patat Lajos Étterem">
         <nav class="normal">
@@ -583,7 +618,15 @@
 
 
         </ul>
+
+        <center>
+            <button onclick="window.location.href='#top'">
+                <img src="./felhasznalhato/up-arrow-svgrepo-com.svg" alt="Teteje" class="ArrowUp">
+            </button>
+          </center>
       </div>
+
+
     </body>
     <script>
                 function Reszlet(item) {
