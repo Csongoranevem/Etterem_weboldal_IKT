@@ -47,7 +47,15 @@
             text-decoration: none;
             margin: 0 15px;
             align-self: baseline;
+            
     
+        }
+
+
+        .navlink{
+            animation-name: NavHoverOUT;
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
         }
     
         .navlink:hover{
@@ -59,9 +67,16 @@
             border-radius: 5px;
             
         }
+
         @keyframes NavHover {
             0%{text-underline-offset:10px; }
             100%{text-underline-offset:5px; background-color: #dfdfdf; color: #2D2926;}
+        }
+
+
+        @keyframes NavHoverOUT {
+            0%{text-underline-offset:5px; background-color: #dfdfdf; color: #2D2926;}
+            100%{text-underline-offset:10px; }
         }
     
         .logokep{
@@ -97,22 +112,18 @@
             background: #FEECC0;
             box-shadow: 0px 3px 5px #2D2926 ;
             padding-top: 10px;
+            transition: 0.5s;
 
 
         }
 
 
         .etel:hover{
-            animation-name: etelHover;
+            background: #c5b16e;
             animation-duration: 0.5s;
             animation-timing-function: ease-out;
             animation-fill-mode: forwards;
 
-        }
-
-        @keyframes etelHover {
-            0%{background: #FEECC0;}
-            100%{background: #c5b16e;}
         }
 
 
