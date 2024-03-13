@@ -167,6 +167,19 @@
         }
     
     
+        form input{
+            display: block;
+            width: 20vh;
+            height: 3vh;
+            background-color: #4e4742;
+            color: #dfdfdf;
+            margin: 1vh;
+            
+        }
+
+        form input type:"button" {
+            background-color: #2D2926;
+        }
     
       </style>
     </head>
@@ -209,6 +222,15 @@
                 <h3>Foglalj asztalt vagy kérj időpontot bármelyik szolgáltatásunkra</h3>
                 <h3>Telefon:
                     +36301234567</h3>
+
+                <form action="foglalas.html">
+                    <input type="text" placeholder="Név" required>
+                    <input type="email" placeholder="E-mail" required>
+                    <input type="number" placeholder="telefonszám" required>
+                    <input type="date" name="Időpont" id="datumValaszt" min="" required>
+                    <input type="number" placeholder="Személyek száma" required>
+                    <input type="button" value="Foglalás" onclick="date()">
+                </form>
             </div>
         </div>
     </div>
@@ -219,6 +241,7 @@
             let item = document.getElementById('hambi');
             item.style.display = (item.style.display === 'block') ? 'none' : 'block';
         }
+
 </script>
     </body>
 </html>
