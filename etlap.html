@@ -47,15 +47,7 @@
             text-decoration: none;
             margin: 0 15px;
             align-self: baseline;
-            
     
-        }
-
-
-        .navlink{
-            /*animation-name: NavHoverOUT;*/
-            animation-duration: 0.5s;
-            animation-fill-mode: forwards;
         }
     
         .navlink:hover{
@@ -67,20 +59,17 @@
             border-radius: 5px;
             
         }
-
         @keyframes NavHover {
             0%{text-underline-offset:10px; }
             100%{text-underline-offset:5px; background-color: #dfdfdf; color: #2D2926;}
         }
-
-
-        /*@keyframes NavHoverOUT {
-            0%{text-underline-offset:5px; background-color: #dfdfdf; color: #2D2926;}
-            100%{text-underline-offset:10px; }
-        }*/
     
         .logokep{
             margin-left: 50px;
+        }
+
+        .normal{
+            display: flex;
         }
         
     
@@ -112,18 +101,22 @@
             background: #FEECC0;
             box-shadow: 0px 3px 5px #2D2926 ;
             padding-top: 10px;
-            transition: 0.5s;
 
 
         }
 
 
         .etel:hover{
-            background: #c5b16e;
+            animation-name: etelHover;      
             animation-duration: 0.5s;
             animation-timing-function: ease-out;
             animation-fill-mode: forwards;
 
+        }
+
+        @keyframes etelHover {
+            0%{background: #FEECC0;}
+            100%{background: #c5b16e;}
         }
 
 
@@ -201,13 +194,13 @@
 
         ul{
             animation-name: etlapAnim;
-            animation-duration: 0.7s;
+            animation-duration: 0.4s;
             animation-fill-mode: forwards;
         }
 
         @keyframes etlapAnim {
-            0%{opacity: 0%;}
-            100%{opacity: 100%;}
+            0%{margin: 5vh;}
+            100%{margin: 0vh;}
         }
 
 
@@ -664,7 +657,6 @@
             let item = document.getElementById('hambi');
             item.style.display = (item.style.display === 'block') ? 'none' : 'block';
         }
-
 
         
     </script>

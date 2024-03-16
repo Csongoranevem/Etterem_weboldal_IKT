@@ -11,13 +11,69 @@
             font-family: "Roboto", sans-serif;
             color: rgb(63, 26, 26);
             font-size: larger;
+            margin: 0;
+            padding: 0;
 
             
         }
 
+        header {
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #2D2926;
+            color: #fff;
+            padding: 10px;
+            
+        }
+    
+        header img {
+            height: 50px;
+            max-height: 50px;
+            margin-right: 10px;
+        }
+    /*navigációs rész formázása*/
+        nav {
+            display: flex;
+        }
+    
+        nav  a {
+            font-size: large;
+            padding: 5px;
+            color: #dfdfdf;
+            text-decoration: none;
+            margin: 0 15px;
+            align-self: baseline;
+            
+    
+        }
+
+
+        .navlink{
+            /*animation-name: NavHoverOUT;*/
+            animation-duration: 0.5s;
+            animation-fill-mode: forwards;
+        }
+    
+        .navlink:hover{
+            animation-name: NavHover;
+            animation-duration: 0.6s;
+            animation-fill-mode: forwards;
+            text-decoration: underline;
+            text-underline-offset:10px;
+            border-radius: 5px;
+            
+        }
+
+        @keyframes NavHover {
+            0%{text-underline-offset:10px; }
+            100%{text-underline-offset:5px; background-color: #dfdfdf; color: #2D2926;}
+        }
+
         .main{
             height: max-content;
-            width: 90%;
+            width: 95%;
             display: flex;
             flex-direction: row;
             border-radius: 5px;
@@ -122,11 +178,28 @@
         
 }
 
+    .logokep{
+        margin-right: 5vh;
+    }
+
+
 
     </style>
 </head>
 <body>
-    <p class="idezet">"Az idő múlik, de az emlékek az ízekben élnek tovább."</p>
+
+    <header>
+        <img src="./felhasznalhato/Logoszoveg.PNG" alt="Patat Lajos Étterem">
+        <nav class="normal">
+                <img src="./felhasznalhato/Logokep.PNG" alt="Logokép" class="logokep">
+            </a>
+    
+        </nav>
+
+</header> 
+
+
+    
 
     <div class="main">
 
@@ -159,5 +232,8 @@
                 </ul>
             </div>
     </div>
+
+    <p class="idezet">"Az idő múlik, de az emlékek az ízekben élnek tovább."</p>
+
 </body>
 </html>

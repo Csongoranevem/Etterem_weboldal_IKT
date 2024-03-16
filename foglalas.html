@@ -171,14 +171,16 @@
             display: block;
             width: 20vh;
             height: 3vh;
-            background-color: #4e4742;
-            color: #dfdfdf;
+            background-color: #ceb7a6;
+            color: #242424;
             margin: 1vh;
+            border-radius: 5px;
             
         }
 
-        form input type:"button" {
+        input[type = "button"] {
             background-color: #2D2926;
+            color: #dfdfdf;
         }
     
       </style>
@@ -226,10 +228,10 @@
                 <form action="foglalas.html">
                     <input type="text" placeholder="Név" required>
                     <input type="email" placeholder="E-mail" required>
-                    <input type="number" placeholder="telefonszám" required>
-                    <input type="date" name="Időpont" id="datumValaszt" min="" required>
+                    <input type="text" placeholder="Telefonszám" id="telefonszam" required maxlength="9">
+                    <input type="date" name="Időpont" id="datumValaszt" min=""  required >
                     <input type="number" placeholder="Személyek száma" required>
-                    <input type="button" value="Foglalás" onclick="date()">
+                    <input type="button" value="Foglalás" onclick="Ellenorzes()">
                 </form>
             </div>
         </div>
@@ -240,6 +242,22 @@
             function Hambi() {
             let item = document.getElementById('hambi');
             item.style.display = (item.style.display === 'block') ? 'none' : 'block';
+        }
+        function Ellenorzes() {
+            let datenow = new Date();
+            let dateget = new Date(document.getElementById('datumValaszt').value);
+            datenow > dateget ? alert("Nagyobbat!") : alert("Foglalva");
+
+            let telefon = document.getElementById('telefonszam');
+            let betuk = "abcdefghijklmnopqrstuvwxyzíéáűúőóüö";
+            for (b of betuk){
+                if(telefon.contains(b)){
+                 alert("Hibás telefonszám");
+                 break;
+                }
+            }
+
+
         }
 
 </script>
