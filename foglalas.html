@@ -252,15 +252,16 @@
         function Ellenorzes() {
             let datenow = new Date();
             let dateget = new Date(document.getElementById('datumValaszt').value);
-            datenow > dateget ? alert("Nagyobbat!") : alert("Foglalva");
+            datenow > dateget ? alert("Rossz dátum!") : alert("Foglalva");
 
-            let telefon = document.getElementById('telefonszam');
-            let betuk = "abcdefghijklmnopqrstuvwxyzíéáűúőóüö";
+            let telefon = new String(document.getElementById('telefonszam').value);
+            let betuk = ("a","b","c","d","e","f","g","h","i","j","k","l","m","n","o","p","q","r","s","t","u","v","w","x","y","z","í","é","á","ű","ú","ő","ó","ü","ö");
             for (b of betuk){
                 if(telefon.contains(b)){
-                 alert("Hibás telefonszám");
-                 break;
+                    alert("Hibás telefonszám");
+                    break;
                 }
+
             }
 
 
