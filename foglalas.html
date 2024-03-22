@@ -252,11 +252,12 @@
         function Ellenorzes() {
             let jo = true;
             let datenow = new Date();
-            let dateget = new Date(document.getElementById('datumValaszt').);
+            let dateget = new Date(document.getElementById('datumValaszt').value);
             datenow > dateget ? jo = false : jo;
 
             let telo = new String(document.getElementById('telefonszam').value);
             let betuk = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+            
             for (b of betuk) {
                     if (telo.includes(b)){
                         jo = false;
