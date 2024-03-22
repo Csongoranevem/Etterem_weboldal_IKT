@@ -186,6 +186,7 @@
         .Hmenu{
             display: none;
             position: relative;
+            visibility: hidden;
 
         }
 
@@ -253,11 +254,13 @@
                 display: none;
                 flex-direction: column;
 
+
                 
             }
             .Hmenu{
                 display: flex;
                 position: relative;
+                visibility: visible;
             }
 
             button{
@@ -311,6 +314,7 @@
     </center>
 
       <div class="main">
+        
 
         
         <ul>
@@ -674,7 +678,8 @@
 
     </body>
     <script>
-                function Reszlet(item) {
+
+            function Reszlet(item) {
             let details = item.querySelector('.reszlet');
             details.style.display = (details.style.display === 'block') ? 'none' : 'block';
             let nyilforgat=item.querySelector('.nyil');
@@ -684,7 +689,10 @@
         function Hambi() {
             let item = document.getElementById('hambi');
             item.style.display = (item.style.display === 'block') ? 'none' : 'block';
+            
+            
         }
+
 
         
     </script>
