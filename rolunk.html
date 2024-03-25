@@ -83,7 +83,7 @@
             margin-bottom: 50px;
             letter-spacing: 1px;
             animation-name: homaly;
-            animation-duration: 1s;
+            animation-duration: 1.5s;
 
             
         }
@@ -105,6 +105,11 @@
         .hatterszin{
             background-color: rgba(253, 231, 176, 0.8);
             
+        }
+        .multkepek{
+            animation-name: egernemrajta;
+            animation-duration: 0.5s;
+            animation-fill-mode:forwards ;
         }
         .multkepek:hover{animation-name:egerrajta;
         animation-duration: 0.5s;
@@ -163,6 +168,11 @@
                 0%{width: 200px;}
                 100%{width:290px ;}
         }
+        @keyframes egernemrajta{
+            0%{width: 290px;}
+            100%{width:200px ;}
+
+        }
 
         .hambikep{
             padding: 1vh;
@@ -198,6 +208,11 @@
                 display: flex;
                 position: relative;
         }
+            }
+                @media only screen and (min-width:1000px)
+            {
+                #hambi a {display: none;}
+
             }
 
 
