@@ -232,11 +232,11 @@
                     +36301234567</h3>
 
                 <form action="foglalas.html">
-                    <input type="text" placeholder="Név" required>
+                    <input type="text" placeholder="Név" id="nev" required>
                     <input type="email" placeholder="E-mail" required>
                     <input type="text" placeholder="Telefonszám" id="telefonszam" required maxlength="9">
                     <input type="date" name="Időpont" id="datumValaszt" min=""  required >
-                    <input type="number" placeholder="Személyek száma" required>
+                    <input type="number" placeholder="Személyek száma" min="1" required>
                     <input type="button" value="Foglalás" onclick="Ellenorzes()">
                 </form>
             </div>
@@ -257,13 +257,27 @@
 
             let telo = new String(document.getElementById('telefonszam').value);
             let betuk = ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+            let szamok = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"]
+
+
             
             for (b of betuk) {
-                    if (telo.includes(b)){
+                    if (telo.toUpperCase().includes(b)){
                         jo = false;
                     }
                 }
-                jo == true ? alert("Foglalva") : alert("Valami nem lyo");
+
+            let nev = new String(document.getElementById('nev').value);
+            for (s of szamok) {
+                    if (nev.includes(s)){
+                        jo = false;
+                    }
+                }
+
+                
+   //             jo == true ? alert("Foglalva") : alert("Hibás adatok!\nFigyelj arra, hogy a telefonszám CSAK SZÁMOKAT tartalmazzon, az email '@' jelet és a személyek száma nem lehet 1-nél kisebb.");
+
+                jo == true ? alert("Foglalva") : alert("Hibás adatok!\n Példa:\n John Doe\n (+36)30-123-4567\njohndoe123@citromail.ru\n (Dátum)\n 4 (személy)");
             }
 
 </script>
