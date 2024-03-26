@@ -42,6 +42,10 @@
             align-self: baseline;
     
         }
+        .navlink{
+            transition: 0.3s;
+            border-radius: 5px;
+        }
     
         .navlink:hover{
             animation-name: NavHover;
@@ -50,11 +54,12 @@
             text-decoration: underline;
             text-underline-offset:10px;
             border-radius: 5px;
+            background-color: #dfdfdf; color: #2D2926;
             
         }
         @keyframes NavHover {
             0%{text-underline-offset:10px; }
-            100%{text-underline-offset:5px; background-color: #dfdfdf; color: #2D2926;}
+            100%{text-underline-offset:5px;}
         }
     
         .logokep{
